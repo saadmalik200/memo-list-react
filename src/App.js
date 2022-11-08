@@ -54,7 +54,7 @@ function App() {
           My plan for the day!
         </h3>
 
-        <div className="flex ml-7 flex-col text-[1rem] h-[22rem] w-[28rem] overflow-auto gap-5 px-3">
+        <div className="flex ml-7 flex-col text-[1rem] h-[20rem] w-[28rem] overflow-auto gap-5 px-3">
           {alltodo.map((item, i) => (
             <Card
               key={i}
@@ -69,7 +69,7 @@ function App() {
             />
           ))}
         </div>
-        <div className="flex ml-[3rem] gap-3 items-center text-[1.5rem]">
+        <div className="flex ml-[4rem] gap-3 items-center text-[1.5rem]">
           <input
             className="border-2 p-1 border-slate-400"
             type="text"
