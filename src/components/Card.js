@@ -9,7 +9,7 @@ const Card = ({ item, i, alltodo, setAllTodo, todo, setTodo, setGetData }) => {
 
   useEffect(() => {
     localStorage.setItem("items", JSON.stringify(alltodo));
-  }, [alltodo, setAllTodo]);
+  }, [alltodo]);
 
   const handleEdit = () => {
     setEdit(!edit);
@@ -33,7 +33,7 @@ const Card = ({ item, i, alltodo, setAllTodo, todo, setTodo, setGetData }) => {
   };
 
   return (
-    <div className="flex justify-between p-2 border-2 border-black my-2 ">
+    <div className="flex w-full justify-between p-2 border-2 border-black my-2 ">
       {edit ? (
         <input
           type="text"

@@ -44,12 +44,17 @@ function App() {
 
   // console.log(getData);
   return (
-    <div className="flex h-screen items-center justify-center ">
-      <div>
-        <h1 className="text-[3rem]">My Memo List</h1>
-        <h3>My plan for the day!</h3>
+    <div className="flex  min-w-[30rem] h-screen justify-center items-center bg-[url(https://i.pinimg.com/736x/e6/73/d5/e673d5128169c3efca2a0a8db75a456c.jpg)] bg-no-repeat  bg-top  overflow-scroll">
+      <div className="min-w-[20%] flex flex-col gap-5 max-h-full">
+        <h1 className="text-indigo-900 text-bold text-[2rem] mb-5 text-center">
+          {" "}
+          My Memo List
+        </h1>
+        <h3 className="text-bold text-[1rem] mt-2 text-center text-teal-700">
+          My plan for the day!
+        </h3>
 
-        <div className="bg-teal-500 h-[10rem]">
+        <div className="flex ml-7 flex-col text-[1rem] h-[22rem] w-[28rem] overflow-auto gap-5 px-3">
           {alltodo.map((item, i) => (
             <Card
               key={i}
@@ -64,7 +69,7 @@ function App() {
             />
           ))}
         </div>
-        <div className="flex gap-3 items-center text-[1.5rem]">
+        <div className="flex ml-[3rem] gap-3 items-center text-[1.5rem]">
           <input
             className="border-2 p-1 border-slate-400"
             type="text"
