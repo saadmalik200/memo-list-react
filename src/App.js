@@ -14,14 +14,6 @@ function App() {
   console.log(alltodo);
   console.log(getData);
 
-  const handleEdit = () => {
-    const findIdx = alltodo.findIndex((item) => item === getData);
-
-    if (findIdx > -1) {
-      setAllTodo([...alltodo, todo]);
-    }
-  };
-
   const handleClick = () => {
     setAllTodo([...alltodo, todo]);
     setTodo("");
@@ -58,7 +50,6 @@ function App() {
             onChange={(e) => setTodo(e.target.value)}
           />
           <IoMdAddCircle onClick={handleClick} />
-          <IoMdAddCircle onClick={handleEdit} />
         </div>
       </div>
     </div>

@@ -12,7 +12,6 @@ const Card = ({ item, i, alltodo, setAllTodo, todo, setTodo, setGetData }) => {
   };
 
   const handleSave = () => {
-    console.log("Hello");
     setInput(input);
     setEdit(!edit);
   };
