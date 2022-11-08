@@ -1,7 +1,7 @@
 {
   "name": "01-intro",
   "version": "0.1.0",
-  "homepage": "https://saadmalik200.github.io/movie-api-react",
+  "homepage": "https://saadmalik200.github.io/memo-list-react",
   "private": true,
   "dependencies": {
     "react": "^18.2.0",
