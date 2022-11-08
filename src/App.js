@@ -15,8 +15,12 @@ function App() {
   console.log(getData);
 
   const handleClick = () => {
-    setAllTodo([...alltodo, todo]);
-    setTodo("");
+    if (todo) {
+      setAllTodo([...alltodo, todo]);
+      setTodo("");
+    } else {
+      alert("please type something");
+    }
   };
 
   // console.log(getData);
