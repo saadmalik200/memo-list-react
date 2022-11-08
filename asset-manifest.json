@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/memo-list-react/static/css/main.a0d2fd9e.css",
+    "main.js": "/memo-list-react/static/js/main.7eaf2aaa.js",
+    "index.html": "/memo-list-react/index.html",
+    "main.a0d2fd9e.css.map": "/memo-list-react/static/css/main.a0d2fd9e.css.map",
+    "main.7eaf2aaa.js.map": "/memo-list-react/static/js/main.7eaf2aaa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a0d2fd9e.css",
+    "static/js/main.7eaf2aaa.js"
+  ]
+}
