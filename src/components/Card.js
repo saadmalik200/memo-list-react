@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Card = ({ item, i, alltodo, setAllTodo, todo, setTodo, setGetData }) => {
   const [status, setStatus] = useState(false);
@@ -7,18 +7,29 @@ const Card = ({ item, i, alltodo, setAllTodo, todo, setTodo, setGetData }) => {
 
   const [edit, setEdit] = useState(false);
 
+  useEffect(() => {
+    localStorage.setItem("items", JSON.stringify(alltodo));
+  }, [alltodo, setAllTodo]);
+
   const handleEdit = () => {
     setEdit(!edit);
   };
 
   const handleSave = () => {
+    const oldArr = [...alltodo];
+
+    oldArr[i] = input;
+    // console.log("Old Arr", oldArr);
+    setAllTodo([...oldArr]);
     setInput(input);
     setEdit(!edit);
   };
 
-  const handleClick = () => {
+  const handleDelete = () => {
     const filter = alltodo.filter((el) => el !== item);
-    setAllTodo(filter);
+    console.log(filter);
+    setAllTodo([...filter]);
+    // localStorage.setItem("items", JSON.stringify(alltodo));
   };
 
   return (
@@ -49,7 +60,7 @@ const Card = ({ item, i, alltodo, setAllTodo, todo, setTodo, setGetData }) => {
         >
           {status ? "Completed" : "Pending"}
         </button>
-        <button onClick={handleClick} className="border-2">
+        <button onClick={handleDelete} className="border-2">
           Delete
         </button>
       </div>

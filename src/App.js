@@ -1,6 +1,6 @@
 import "./App.css";
 import { IoMdAddCircle } from "react-icons/io";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Card from "./components/Card";
 
 function App() {
@@ -11,8 +11,27 @@ function App() {
 
   const [getData, setGetData] = useState("");
 
-  console.log(alltodo);
-  console.log(getData);
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    const items = JSON.parse(localStorage.getItem("items"));
+
+    console.log(`Get Item`);
+    if (items) {
+      setAllTodo(items);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("items", JSON.stringify(alltodo));
+    console.log(`Set Item`);
+
+    return () => {
+      console.log("useeffect return runs");
+    };
+  }, [alltodo]);
+
+  // console.log(items);
 
   const handleClick = () => {
     if (todo) {
